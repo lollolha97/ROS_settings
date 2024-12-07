@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# sudo 캐시 활성화
+sudo -v
+
 # UTF-8 로케일 설정 확인 및 설정
 echo "로케일 설정을 확인 중입니다..."
 locale  # UTF-8 확인
