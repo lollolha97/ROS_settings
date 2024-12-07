@@ -37,6 +37,7 @@ sudo apt upgrade -y
 # ROS 2 Humble Desktop 설치
 echo "ROS 2 Humble Desktop 설치 중..."
 sudo apt install -y ros-humble-desktop
+sudo apt install -y python3-colcon-common-extensions
 
 # 새로운 셸에서 자동으로 ROS 2 설정이 적용되도록 bashrc에 추가
 echo "환경을 설정하여 새로운 셸에서 ROS 2가 자동으로 적용되도록 구성 중..."
