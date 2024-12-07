@@ -14,5 +14,9 @@ RUN apt-get update && apt-get install -y \
 ENV DISPLAY=:0
 ENV QT_X11_NO_MITSHM=1
 
-# 기본 실행 명령어 (bash)
-CMD ["bash"]
+# ROS 2 환경 설정을 .bashrc에 추가
+RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+
+# 기본 실행 명령어: ROS 2 환경을 설정한 후 실행
+# CMD ["bash", "-c", "source /opt/ros/humble/setup.bash && ros2 launch tiago_gazebo tiago_gazebo.launch.py"]
+CMD ["ros2", "launch", "tiago_gazebo", "tiago_gazebo.launch.py"]
