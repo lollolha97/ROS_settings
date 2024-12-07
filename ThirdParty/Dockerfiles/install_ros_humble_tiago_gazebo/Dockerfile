@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 
 # 사용자 권한과 X11 디스플레이 환경 설정
 ENV DISPLAY=:0
-ENV QT_X11_NO_MITSHM=1
+# ENV QT_X11_NO_MITSHM=1
 
 # ROS 2 환경 설정을 .bashrc에 추가
 RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
